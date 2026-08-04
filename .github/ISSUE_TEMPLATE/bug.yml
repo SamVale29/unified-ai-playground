@@ -1,0 +1,31 @@
+name: Bug report
+description: Report a reproducible problem in the playground
+title: 'bug: '
+labels: [bug]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What were you trying to compare?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction
+      description: Include preset, target count and mock/live mode. Never include keys.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true

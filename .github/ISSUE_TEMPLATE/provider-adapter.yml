@@ -1,0 +1,30 @@
+name: Provider adapter
+description: Request or propose a provider adapter change
+title: 'adapter: '
+labels: [provider, adapter]
+body:
+  - type: input
+    id: provider
+    attributes:
+      label: Provider
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official documentation URL
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility notes
+      description: Describe native, adapted, partial and unsupported features.
+    validations:
+      required: true
+  - type: textarea
+    id: tests
+    attributes:
+      label: Contract tests and acceptance criteria
+    validations:
+      required: true

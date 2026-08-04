@@ -1,0 +1,26 @@
+{
+  "name": "@ai-sdk-playground/gateway",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local-only gateway for AI SDK Playground provider calls.",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.json --noEmit",
+    "start": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@ai-sdk-playground/adapter-anthropic": "workspace:*",
+    "@ai-sdk-playground/adapter-deepseek": "workspace:*",
+    "@ai-sdk-playground/adapter-google": "workspace:*",
+    "@ai-sdk-playground/adapter-mistral": "workspace:*",
+    "@ai-sdk-playground/adapter-openai": "workspace:*",
+    "@ai-sdk-playground/adapter-openrouter": "workspace:*",
+    "@ai-sdk-playground/adapter-xai": "workspace:*",
+    "@ai-sdk-playground/catalog": "workspace:*",
+    "@ai-sdk-playground/core": "workspace:*",
+    "@ai-sdk-playground/protocol": "workspace:*",
+    "@hono/node-server": "2.0.12",
+    "hono": "4.13.0"
+  }
+}

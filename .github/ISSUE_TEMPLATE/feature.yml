@@ -1,0 +1,22 @@
+name: Feature request
+description: Propose a focused improvement
+title: 'feat: '
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What developer workflow is blocked?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and acceptance criteria
+    validations:
+      required: true
+  - type: textarea
+    id: docs
+    attributes:
+      label: Relevant files or documentation

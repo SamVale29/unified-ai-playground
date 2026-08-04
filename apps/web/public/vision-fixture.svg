@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">AI SDK Playground vision fixture</title>
+  <desc id="desc">A public, project-created illustration of a small lab bench with labeled cards.</desc>
+  <rect width="1200" height="700" fill="#f3efe7"/>
+  <rect y="525" width="1200" height="175" fill="#20313b"/>
+  <circle cx="940" cy="180" r="120" fill="#d7ece8"/>
+  <rect x="105" y="145" width="330" height="235" rx="24" fill="#fffdf8" stroke="#26333b" stroke-width="10"/>
+  <rect x="150" y="196" width="240" height="20" rx="10" fill="#5d8f87"/>
+  <rect x="150" y="245" width="190" height="16" rx="8" fill="#e4b363"/>
+  <rect x="150" y="286" width="215" height="16" rx="8" fill="#a8c7cf"/>
+  <circle cx="760" cy="360" r="120" fill="#edc27b" stroke="#26333b" stroke-width="10"/>
+  <rect x="685" y="320" width="150" height="24" rx="12" fill="#26333b"/>
+  <rect x="720" y="365" width="80" height="24" rx="12" fill="#fffdf8"/>
+  <path d="M560 526V400c0-32 26-58 58-58h24c32 0 58 26 58 58v126" fill="#a8c7cf" stroke="#26333b" stroke-width="10"/>
+  <text x="105" y="92" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#20313b">PROJECT VISION FIXTURE</text>
+  <text x="105" y="460" font-family="Arial, sans-serif" font-size="26" fill="#20313b">safe local image · no external data</text>
+</svg>

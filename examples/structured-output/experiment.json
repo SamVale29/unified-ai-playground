@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "0.1.0",
+  "id": "fixture-structured-output",
+  "name": "Structured extraction fixture",
+  "request": {
+    "messages": [
+      {
+        "id": "user-1",
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Extract invoice number, total and currency from: INV-DEMO-042 · Total R$ 128,50 · Currency BRL."
+          }
+        ]
+      }
+    ],
+    "generation": { "temperature": 0, "maxOutputTokens": 180 },
+    "output": {
+      "format": "json-schema",
+      "schemaName": "invoice",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "invoiceId": { "type": "string" },
+          "total": { "type": "number" },
+          "currency": { "type": "string" }
+        },
+        "required": ["invoiceId", "total", "currency"]
+      }
+    }
+  },
+  "targets": [
+    { "id": "openai-target", "providerId": "openai", "modelId": "openai:gpt-4o-mini", "enabled": true },
+    { "id": "google-target", "providerId": "google", "modelId": "google:gemini-2.0-flash", "enabled": true }
+  ],
+  "execution": {
+    "mode": "parallel",
+    "repetitions": 1,
+    "concurrency": 2,
+    "timeoutMs": 60000,
+    "stream": true,
+    "continueOnError": true,
+    "compatibilityMode": "lenient"
+  },
+  "privacy": { "saveContent": false, "includeRawPayloads": false, "redactPatterns": [] },
+  "createdAt": "2026-08-03T00:00:00.000Z",
+  "tags": ["fixture", "structured"]
+}

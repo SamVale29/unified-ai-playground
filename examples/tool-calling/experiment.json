@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "0.1.0",
+  "id": "fixture-tool-calling",
+  "name": "Manual tool selection fixture",
+  "request": {
+    "messages": [
+      {
+        "id": "user-1",
+        "role": "user",
+        "content": [
+          { "type": "text", "text": "Choose a weather fixture tool for São Paulo. Do not execute it." }
+        ]
+      }
+    ],
+    "generation": { "temperature": 0.1, "maxOutputTokens": 160 },
+    "tools": [
+      {
+        "name": "get_weather_fixture",
+        "description": "Get weather from a deterministic local fixture.",
+        "inputSchema": {
+          "type": "object",
+          "properties": { "city": { "type": "string" } },
+          "required": ["city"]
+        }
+      }
+    ],
+    "toolChoice": "auto",
+    "output": { "format": "text" }
+  },
+  "targets": [
+    { "id": "openai-target", "providerId": "openai", "modelId": "openai:gpt-4o-mini", "enabled": true },
+    {
+      "id": "anthropic-target",
+      "providerId": "anthropic",
+      "modelId": "anthropic:claude-3-5-sonnet-20241022",
+      "enabled": true
+    }
+  ],
+  "execution": {
+    "mode": "parallel",
+    "repetitions": 1,
+    "concurrency": 2,
+    "timeoutMs": 60000,
+    "stream": true,
+    "continueOnError": true,
+    "compatibilityMode": "lenient"
+  },
+  "privacy": { "saveContent": false, "includeRawPayloads": false, "redactPatterns": [] },
+  "createdAt": "2026-08-03T00:00:00.000Z",
+  "tags": ["fixture", "tools"]
+}

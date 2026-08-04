@@ -1,0 +1,42 @@
+{
+  "name": "ai-sdk-playground",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A unified open-source playground for testing and comparing AI APIs across providers.",
+  "author": "Sam Vale",
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@11.6.0",
+  "scripts": {
+    "dev": "pnpm --filter @ai-sdk-playground/web dev",
+    "dev:gateway": "pnpm --filter @ai-sdk-playground/gateway dev",
+    "build": "pnpm --filter @ai-sdk-playground/web build && pnpm --filter @ai-sdk-playground/gateway build",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint . --max-warnings=0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "catalog:validate": "tsx scripts/validate-catalog.ts",
+    "security:scan": "tsx scripts/scan-secrets.ts",
+    "pack:check": "pnpm -r --filter @ai-sdk-playground/* pack --pack-destination .artifacts",
+    "cli": "pnpm --filter @ai-sdk-playground/cli start",
+    "prepare": "node -e \"console.log('AI SDK Playground workspace ready')\""
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.62.1",
+    "@types/node": "26.1.2",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "@vitejs/plugin-react": "6.0.5",
+    "@vitest/coverage-v8": "4.1.10",
+    "eslint": "10.8.0",
+    "prettier": "3.9.6",
+    "tsx": "4.23.5",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.66.0",
+    "vite": "8.2.0",
+    "vitest": "4.1.10"
+  }
+}

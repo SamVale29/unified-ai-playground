@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+title: AI SDK Playground
+message: 'If you use AI SDK Playground in research or a project, please cite it.'
+type: software
+authors:
+  - family-names: Vale
+    given-names: Sam
+    affiliation: Independent open-source maintainer
+version: 0.1.0
+date-released: 2026-08-03
+license: Apache-2.0
+repository-code: https://github.com/SamVale29/unified-ai-playground
+abstract: A unified open-source playground for testing and comparing AI APIs across providers.

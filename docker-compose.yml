@@ -1,0 +1,16 @@
+services:
+  gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    environment:
+      HOST: 127.0.0.1
+      PORT: 8787
+      ALLOW_REMOTE_ACCESS: 'false'
+    ports:
+      - '127.0.0.1:8787:8787'
+    read_only: true
+    security_opt:
+      - no-new-privileges:true

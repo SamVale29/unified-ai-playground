@@ -1,0 +1,17 @@
+{
+  "name": "@ai-sdk-playground/metrics",
+  "version": "0.1.0",
+  "description": "Provider-neutral latency, usage, cost and validation metrics.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "types": "./src/index.ts",
+  "files": [
+    "src"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@ai-sdk-playground/protocol": "workspace:*"
+  }
+}

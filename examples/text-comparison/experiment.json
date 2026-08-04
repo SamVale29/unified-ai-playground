@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "0.1.0",
+  "id": "fixture-text-comparison",
+  "name": "Text comparison fixture",
+  "request": {
+    "messages": [
+      {
+        "id": "user-1",
+        "role": "user",
+        "content": [{ "type": "text", "text": "Explain event loops in five bullet points." }]
+      }
+    ],
+    "generation": { "temperature": 0.2, "maxOutputTokens": 180 },
+    "output": { "format": "text" }
+  },
+  "targets": [
+    { "id": "openai-target", "providerId": "openai", "modelId": "openai:gpt-4o-mini", "enabled": true },
+    {
+      "id": "anthropic-target",
+      "providerId": "anthropic",
+      "modelId": "anthropic:claude-3-5-sonnet-20241022",
+      "enabled": true
+    },
+    { "id": "google-target", "providerId": "google", "modelId": "google:gemini-2.0-flash", "enabled": true }
+  ],
+  "execution": {
+    "mode": "parallel",
+    "repetitions": 1,
+    "concurrency": 3,
+    "timeoutMs": 60000,
+    "stream": true,
+    "continueOnError": true,
+    "compatibilityMode": "lenient"
+  },
+  "privacy": { "saveContent": false, "includeRawPayloads": false, "redactPatterns": [] },
+  "createdAt": "2026-08-03T00:00:00.000Z",
+  "tags": ["fixture", "text"]
+}

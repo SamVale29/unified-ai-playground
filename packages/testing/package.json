@@ -1,0 +1,26 @@
+{
+  "name": "@ai-sdk-playground/testing",
+  "version": "0.1.0",
+  "description": "Shared provider adapter contract helpers and fixture tests.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "types": "./src/index.ts",
+  "files": [
+    "src"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@ai-sdk-playground/adapter-anthropic": "workspace:*",
+    "@ai-sdk-playground/adapter-deepseek": "workspace:*",
+    "@ai-sdk-playground/adapter-google": "workspace:*",
+    "@ai-sdk-playground/adapter-mistral": "workspace:*",
+    "@ai-sdk-playground/adapter-openai": "workspace:*",
+    "@ai-sdk-playground/adapter-openrouter": "workspace:*",
+    "@ai-sdk-playground/adapter-xai": "workspace:*",
+    "@ai-sdk-playground/catalog": "workspace:*",
+    "@ai-sdk-playground/core": "workspace:*",
+    "@ai-sdk-playground/protocol": "workspace:*"
+  }
+}

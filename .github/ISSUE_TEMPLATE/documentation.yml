@@ -1,0 +1,17 @@
+name: Documentation
+description: Improve docs, examples or translations
+title: 'docs: '
+labels: [documentation]
+body:
+  - type: textarea
+    id: gap
+    attributes:
+      label: Documentation gap
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true

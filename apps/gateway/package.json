@@ -21,6 +21,6 @@
     "@ai-sdk-playground/core": "workspace:*",
     "@ai-sdk-playground/protocol": "workspace:*",
     "@hono/node-server": "2.0.12",
-    "hono": "4.13.0"
+    "hono": "4.13.7"
   }
 }

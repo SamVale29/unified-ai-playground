@@ -16,7 +16,7 @@ jobs:
         node: [22, 24]
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6.0.9
         with:
           version: 11.6.0
       - uses: actions/setup-node@v4
@@ -44,7 +44,7 @@ jobs:
     needs: quality
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v6.0.9
         with:
           version: 11.6.0
       - uses: actions/setup-node@v4

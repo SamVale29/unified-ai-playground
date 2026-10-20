@@ -38,7 +38,7 @@ jobs:
         env:
           VITE_PUBLIC_DEMO_MODE: true
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v3
         with:
           path: apps/web/dist
